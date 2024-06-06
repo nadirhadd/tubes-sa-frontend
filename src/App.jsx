@@ -11,7 +11,7 @@ const App = () => {
       <Sidebar />
       <div className="flex flex-col w-full">
         <Navbar />
-        <div className="p-4 bg-[#EEEDEB] h-full">
+        <div className="p-4 bg-[#EEEDEB] h-screen">
           <Hero />
         </div>
       </div>
