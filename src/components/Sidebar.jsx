@@ -1,4 +1,5 @@
 import { sideLinks } from "../constants";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -12,11 +13,11 @@ const Sidebar = () => {
             <li className="pb-10">
               <hr />
             </li>
-            {sideLinks.map((side) => (
-              <li key={side.id} className="text-white py-7 text-xl text-text">
-                <a href="#" className="hover:text-[#9CAFAA]">
-                  {side.title}
-                </a>
+            {sideLinks.map((link) => (
+              <li key={link.id} className="text-white py-7 text-xl text-text">
+                <Link to={link.link} className="hover:text-[#9CAFAA]">
+                  {link.title}
+                </Link>
               </li>
             ))}
           </ul>

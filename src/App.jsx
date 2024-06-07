@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Sidebar, Navbar, Hero } from "./components";
+import { Dashboard, Meetings, Profile } from "./pages";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   useEffect(() => {
@@ -7,15 +8,13 @@ const App = () => {
   }, []);
 
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="flex flex-col w-full">
-        <Navbar />
-        <div className="p-4 bg-[#EEEDEB] h-screen">
-          <Hero />
-        </div>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard/>} />
+        <Route path="/meetings" element={<Meetings/>} />
+        <Route path="/profile" element={<Profile/>} />
+      </Routes>
+    </Router>
   );
 };
 

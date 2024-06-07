@@ -2,17 +2,16 @@ export const sideLinks = [
   {
     id: "dashboard",
     title: "Dashboard",
-  },
-  {
-    id: "schedule",
-    title: "Schedule",
+    link: '/',
   },
   {
     id: "meetings",
     title: "Meetings",
+    link: '/meetings',
   },
   {
     id: "profile",
     title: "Profile",
+    link: '/profile',
   },
 ];
